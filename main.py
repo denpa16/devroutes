@@ -40,6 +40,7 @@ async def cmd_locate_me(message: types.Message):
     #await message.answer(reply, reply_markup=get_keyboard())
     #56.11652974585433, 47.2738052239553
     #print(message.chat.id)
+    user = message.edit_live_location()
     await bot.send_location(chat_id=message.chat.id,latitude=56.11652974585433, longitude = 47.2738052239553, live_period=900)
 
 if __name__ == '__main__':
